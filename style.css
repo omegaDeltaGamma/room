@@ -5,4 +5,78 @@
   font-size: 12px;
 }
 
+.main {
+  display: grid;
+  grid-template-columns: minmax(600px, 840px) 1fr;
+}
+
+.first {
+  background: url(./images/desktop-image-hero-1.jpg);
+  height: 500px;
+  box-sizing: border-box;
+  padding: 60px 50px;
+}
+
+li {
+  list-style: none;
+  display: inline;
+}
+li a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo {
+  margin-right: 40px;
+}
+
+.element {
+  color: white;
+  font-size: 11px;
+  font-weight: 500;
+  margin: 0 20px;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+}
+
+.element:hover {
+  border-bottom: 2px solid white;
+  cursor: pointer;
+}
+
+.second {
+  box-sizing: border-box;
+  padding: 120px 90px;
+}
+
+.title {
+  color: black;
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.para1 {
+  color: #a1a1a1;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.switch {
+  color: black;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  margin-right: 20px;
+}
+
+.switch-case:hover .switch {
+  color: #a1a1a1;
+  cursor: pointer;
+}
+.switch-case:hover .arrow {
+  background-color: #a1a1a1;
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=style.css.map */
