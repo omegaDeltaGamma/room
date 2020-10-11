@@ -47,6 +47,7 @@ li a {
 .second {
   box-sizing: border-box;
   padding: 120px 90px;
+  padding-bottom: 50px;
 }
 
 .title {
@@ -77,6 +78,63 @@ li a {
 .switch-case:hover .arrow {
   background-color: #a1a1a1;
   cursor: pointer;
+}
+
+.before-next {
+  position: relative;
+  right: 90px;
+  top: 60px;
+}
+
+.left {
+  background: black;
+  padding: 20px 20px;
+}
+
+.right {
+  background: black;
+  padding: 20px 20px;
+  position: relative;
+  right: 3px;
+}
+
+.left:hover, .right:hover {
+  background: #454545;
+  cursor: pointer;
+}
+
+.secondary {
+  display: grid;
+  grid-template-columns: 1fr minmax(300px, 547px) 1fr;
+}
+
+.black {
+  background: url(./images/image-about-dark.jpg);
+  height: 250px;
+}
+
+.white {
+  background: url(./images/image-about-light.jpg);
+  height: 250px;
+}
+
+.furniture {
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.stitle {
+  color: black;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+}
+
+.para2 {
+  color: #a1a1a1;
+  font-weight: 500;
+  line-height: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
