@@ -7,56 +7,69 @@ var background = document.getElementsByClassName("first")[0];
 var first = {
     title: "Discover innovative ways to decorate",
     paragraph: "We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form andnfunction in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.",
-    number: 1,
+    background: "url('./images/desktop-image-hero-1.jpg')"
 };
 
 var second = {
     title: "We are available all across the globe",
     paragraph: "With stores all over the world, it's easy for you to find furniture for your home or place of business. Locally, we’re in most major cities throughout the country. Find the branch nearest you using our store locator. Any questions? Don't hesitate to contact us today.", 
-    number: 2,
+    background: "url('./images/desktop-image-hero-2.jpg')"
 };
 
 var third = {
     title: "Manufactured with the best materials", 
     paragraph: " Our modern furniture store provide a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as possible. With three decades of experience in this industry, we understand what customers want for their home and office.", 
-    number: 3,
+    background: "url('./images/desktop-image-hero-3.jpg')"
 };
 
+function checkWidth() {
+    var max = window.matchMedia("(max-width: 480px)");
+    if(max.matches) {
+        first.background = "url('./images/mobile-image-hero-1.jpg')";
+        second.background = "url('./images/mobile-image-hero-2.jpg')";
+        third.background = "url('./images/mobile-image-hero-3.jpg')";
+    }
+}
+
 function switchRight() {
+    checkWidth();
     if (title.textContent === first.title) {
         title.textContent = second.title;
         paragraph.textContent = second.paragraph;
-        background.style.background = "url('./images/desktop-image-hero-2.jpg')";
+        background.style.background = second.background;
     }
     else if (title.textContent === second.title){
         title.textContent = third.title;
         paragraph.textContent = third.paragraph;
-        background.style.background = "url('./images/desktop-image-hero-3.jpg')";
+        background.style.background = third.background;
     }
     else {
         title.textContent = first.title;
         paragraph.textContent = first.paragraph;
-        background.style.background = "url('./images/desktop-image-hero-1.jpg')";
+        background.style.background = first.background;
     }
 }
 
 function switchLeft() {
+    checkWidth();
     if (title.textContent === first.title) {
         title.textContent = third.title;
         paragraph.textContent = third.paragraph;
-        background.style.background = "url('./images/desktop-image-hero-3.jpg')";
+        background.style.background = third.background;
     }
     else if (title.textContent === second.title){
         title.textContent = first.title;
         paragraph.textContent = first.paragraph;
-        background.style.background = "url('./images/desktop-image-hero-1.jpg')";
+        background.style.background = first.background;
     }
     else {
         title.textContent = second.title;
         paragraph.textContent = second.paragraph;
-        background.style.background = "url('./images/desktop-image-hero-2.jpg')";
+        background.style.background = second.background;
     }
 }
+
+
 
 right.addEventListener("click", switchRight, false);
 left.addEventListener("click", switchLeft, false);

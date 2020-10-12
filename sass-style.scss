@@ -49,6 +49,10 @@ li {
     cursor: pointer;
 }
 
+.ham {
+    display: none;
+}
+
 .second {
     box-sizing: border-box;
     padding: 120px 70px;
@@ -143,4 +147,72 @@ li {
     color: $dark-gray;
     font-weight: 500;
     line-height: 20px;
+}
+
+@media screen and (max-width: 480px) {
+    .main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .first {
+        background: url(./images/mobile-image-hero-1.jpg) no-repeat;
+        background-size: cover;
+        height: 360px;
+        position: relative;
+        z-index: 1;
+    }
+
+    ul {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .logo {
+        margin-top: 0;
+        margin-left: 100px;
+    }
+
+    .element {
+        display: none;
+    }
+
+    .ham {
+        display: block;
+    }
+
+    .second {
+        padding: 20px 40px;
+    }
+
+    .before-next {
+        position: absolute;
+        left: 120px;
+        bottom: 128px;
+        z-index: 2;
+    }
+
+    .left {
+        position: relative;
+        left: 10px;
+    }
+
+    .right {
+        position: relative;
+        bottom: 68px;
+        left: 60px;
+    }
+
+    .secondary {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .white {
+        background: url(./images/image-about-light.jpg)  no-repeat;
+        height: 250px;
+    }
+
 }
