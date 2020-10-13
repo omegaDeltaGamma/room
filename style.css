@@ -245,7 +245,7 @@ li a {
   .before-next {
     position: absolute;
     left: 120px;
-    bottom: 250px;
+    bottom: 300px;
     z-index: 2;
   }
 
