@@ -1,3 +1,8 @@
+:root {
+    --dark-gray: hsl(0, 0%, 63%);
+}
+
+
 $dark-gray: hsl(0, 0%, 63%);
 $black: hsl(0, 0%, 0%);
 $white: hsl(0, 0%, 100%);
@@ -9,6 +14,17 @@ $vdark-gray: hsl(0, 0%, 27%);
     font-family: 'Spartan', sans-serif;
     font-size: 12px;
 }
+
+/*#overlay {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--dark-gray);
+    display: none;
+}*/
 
 .main {
     display: grid;
@@ -74,7 +90,7 @@ li {
 }
 
 .para1 {
-    color: $dark-gray;
+    color: var(--dark-gray);
     font-weight: 500;
     line-height: 20px;
 }
@@ -89,12 +105,12 @@ li {
 
 .switch-case:hover {
     .switch {
-        color: $dark-gray;
+        color: var(--dark-gray);
         cursor: pointer;
     }
 
     .arrow {
-        background-color: $dark-gray;
+        background-color: var(--dark-gray);
         cursor: pointer;
     }
 }
@@ -151,7 +167,7 @@ li {
 }
 
 .para2 {
-    color: $dark-gray;
+    color: var(--dark-gray);
     font-weight: 500;
     line-height: 20px;
 }
@@ -174,6 +190,9 @@ li {
     ul {
         display: flex;
         justify-content: flex-start;
+        //background: $white;
+        position: relative;
+        z-index: 3;
     }
 
     .logo {
@@ -182,24 +201,53 @@ li {
     }
 
     .element {
-        position: absolute;
-        z-index: 3;
-        right: 210px;
-        margin: 0 20px;
-        font-size: 12px;
-        font-weight: 600;
         display: none;
+        position: relative;
+        z-index: 3;
+        right: 30px;
+        margin: 0;
     }
+
+    /*li {
+        a {
+            color: $black;
+            font: {
+                size: 13px;
+                weight: 600;
+            }
+        }
+    }*/
+    .one {
+        margin-left: 20px;
+    }
+
+    .two {
+        margin-left: 20px;
+    }
+    
+    .three {
+        margin-left: 20px;
+    }
+
+    .four {
+        margin-left: 20px;
+    }
+
 
     .close {
         display: none;
         position: absolute;
-        z-index: 3;
+        z-index: 4;
         right: 300px;
+        margin-right: 40px;
     }
 
     .ham {
         display: block;
+    }
+
+    .ham:hover, .close:hover {
+        cursor: pointer
     }
 
     .second {
@@ -231,7 +279,7 @@ li {
     }
 
     .white {
-        background: url(./images/image-about-light.jpg)  no-repeat;
+        background: url(./images/image-about-light.jpg);
         height: 250px;
     }
 

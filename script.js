@@ -3,6 +3,17 @@ var left = document.getElementsByClassName("left")[0];
 var title = document.getElementsByClassName("title")[0];
 var paragraph = document.getElementsByClassName("para1")[0];
 var background = document.getElementsByClassName("first")[0]; 
+var nav = document.querySelector(".ham");
+var end = document.querySelector(".close");
+var container = document.querySelector("ul");
+var logo = document.querySelector(".logo");
+var element = document.querySelectorAll(".element");
+var listElement1 = document.querySelector(".one");
+var listElement2 = document.querySelector(".two");
+var listElement3 = document.querySelector(".three");
+var listElement4 = document.querySelector(".four");
+var body = document.querySelector("body");
+var overlay = document.querySelector("#overlay");
 
 var first = {
     title: "Discover innovative ways to decorate",
@@ -21,6 +32,27 @@ var third = {
     paragraph: " Our modern furniture store provide a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as possible. With three decades of experience in this industry, we understand what customers want for their home and office.", 
     background: "url('./images/desktop-image-hero-3.jpg')"
 };
+
+function modifyList (size, weight, color) {
+    listElement1.style.fontSize = size;
+    listElement1.style.fontWeight = weight;
+    listElement1.style.color = color;
+    listElement2.style.fontSize = size;
+    listElement2.style.fontWeight = weight;
+    listElement2.style.color = color;
+    listElement3.style.fontSize = size;
+    listElement3.style.fontWeight = weight;
+    listElement3.style.color = color;
+    listElement4.style.fontSize = size;
+    listElement4.style.fontWeight = weight;
+    listElement4.style.color = color;
+}
+
+function switchDisplay(display) {
+    for (let i = 0; i < element.length; i++) {
+        element[i].style.display = display;
+    }
+}
 
 function checkWidth() {
     var max = window.matchMedia("(max-width: 480px)");
@@ -69,8 +101,30 @@ function switchLeft() {
     }
 }
 
+function showNav() {
+    nav.style.display = "none";
+    logo.style.display = "none";
+    container.style.background = "hsl(0, 0%, 100%)";
+    end.style.display = "block";
+    body.style.background = "hsl(0, 0%, 63%)";
+    document.documentElement.style.setProperty('--dark-gray',"hsl(0, 0%, 27%)");
+    switchDisplay("block");
+    modifyList("13px", "600", "hsl(0, 0%, 0%)");
+}
 
+function hideNav() {
+    nav.style.display = "block";
+    logo.style.display = "block";
+    container.style.background = "none";
+    end.style.display = "none";
+    body.style.background = "none";
+    document.documentElement.style.setProperty('--dark-gray', "hsl(0, 0%, 63%)");
+    switchDisplay("none");
+    modifyList("11px", "500", "hsl(0, 0%, 100%)");
+}
 
+nav.addEventListener("click", showNav, false);
+end.addEventListener("click", hideNav, false);
 right.addEventListener("click", switchRight, false);
 left.addEventListener("click", switchLeft, false);
 
