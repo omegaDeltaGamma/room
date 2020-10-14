@@ -73,6 +73,7 @@ li a {
   box-sizing: border-box;
   padding: 120px 70px;
   padding-bottom: 50px;
+  position: relative;
 }
 
 .title {
@@ -109,6 +110,9 @@ li a {
   position: absolute;
   right: 398px;
   bottom: 159px;
+  bottom: 0;
+  left: 0;
+  display: flex;
 }
 
 .left {
